@@ -1,6 +1,13 @@
 import './CSS/index.css';
 import styled from 'styled-components';
 
+const CircleWrapper = styled.div`
+  animation: rotation 8s linear infinite;
+
+  position: relative;
+  z-index: -1;
+`;
+
 const CircleContainer = styled.div`
   width: 400px;
   height: 400px;
@@ -9,8 +16,6 @@ const CircleContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  z-index: -1;
 
   @media only screen and (max-width: 450px) {
     transform: translate(-50%, -50%) scale(0.7);
@@ -58,7 +63,7 @@ const Circle = styled.div`
 
   position: absolute;
   top: 0%;
-  left: 0;
+  left: 0%;
 `;
 
 const StyledH1 = styled.h1`
@@ -74,10 +79,12 @@ const StyledH1 = styled.h1`
 const App = () => {
   return (
     <>
-      <CircleContainer>
-        <BlurriedCircle></BlurriedCircle>
-        <Circle></Circle>
-      </CircleContainer>
+      <CircleWrapper>
+        <CircleContainer>
+          <BlurriedCircle></BlurriedCircle>
+          <Circle></Circle>
+        </CircleContainer>
+      </CircleWrapper>
 
       <StyledH1>Notre point d’Origine est encore en développement.</StyledH1>
     </>
