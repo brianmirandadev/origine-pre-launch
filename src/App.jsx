@@ -2,7 +2,7 @@ import './CSS/index.css';
 import styled from 'styled-components';
 
 const CircleWrapper = styled.div`
-  animation: rotation 8s linear infinite;
+  animation: rotation 10s linear infinite;
 
   position: relative;
   z-index: -1;
@@ -24,16 +24,16 @@ const CircleContainer = styled.div`
 
 const BlurriedCircle = styled.div`
   background: linear-gradient(#ffffff 0%, #e3e3e3 5%, #2b2b2b 25%);
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: 99%;
 
   border-radius: 50%;
 
   position: relative;
-  top: 45%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(7px);
+  filter: blur(5px);
 
   &::after {
     content: '';
@@ -45,7 +45,7 @@ const BlurriedCircle = styled.div`
     border-radius: 50%;
 
     position: absolute;
-    top: 43%;
+    top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -55,7 +55,7 @@ const BlurriedCircle = styled.div`
 `;
 
 const Circle = styled.div`
-  background: linear-gradient(#2e2e2e 0%, #000000 30%);
+  background: linear-gradient(#2e2e2e 0%, #000000 10%);
   width: 100%;
   height: 100%;
 
